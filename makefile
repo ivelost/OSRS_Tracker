@@ -1,6 +1,6 @@
 IDIR=inc
 CC=gcc
-CFLAGS=-I$(IDIR) -Wall -pedantic
+CFLAGS=-I$(IDIR) -Wall -pedantic -l sqlite3
 
 ODIR=obj
 LDIR=lib
