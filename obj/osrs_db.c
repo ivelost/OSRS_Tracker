@@ -2,10 +2,25 @@
 #include <sqlite3.h>
 #include "osrs_db.h"
 
+int check_db(){
+	sqlite3* database;
+	int rc;
+	rc = sqlite3_open("osrs.db", &database);
+
+	if (rc) {
+		return 1;
+	}
+
+	return 0;
+}
+
+int check_db_upd(sqlite3* database){
+	return 0;
+}
+
 int init_database() {
 	sqlite3* database;
 	int rc;
-
 	rc = sqlite3_open("osrs.db", &database);
 
 	if (rc) {
@@ -19,5 +34,6 @@ int init_database() {
 }
 
 int init_struct (sqlite3* database) {
+	
 	return 0;	
 }
